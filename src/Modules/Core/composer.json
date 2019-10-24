@@ -1,0 +1,25 @@
+{
+    "name": "Modules/core",
+    "description": "",
+    "authors": [
+        {
+            "name": "Md Sahidur Rahmna",
+            "email": "sohidurr49@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Core\\Providers\\CoreServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Core\\": ""
+        }
+    }
+}
