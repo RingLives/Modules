@@ -1,5 +1,5 @@
 {
-    "name": "Modules/core",
+    "name": "Modules/support",
     "description": "",
     "authors": [
         {
@@ -10,7 +10,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\Core\\Providers\\CoreServiceProvider"
+                "Modules\\Support\\Providers\\SupportServiceProvider"
             ],
             "aliases": {
                 
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Core\\": ""
+            "Modules\\Support\\": ""
         }
     }
 }

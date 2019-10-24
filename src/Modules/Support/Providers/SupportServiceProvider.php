@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Core\Providers;
+namespace Modules\Support\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
-class CoreServiceProvider extends ServiceProvider
+class SupportServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -46,10 +46,10 @@ class CoreServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('core.php'),
+            __DIR__.'/../Config/config.php' => config_path('support.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'core'
+            __DIR__.'/../Config/config.php', 'support'
         );
     }
 
@@ -60,7 +60,7 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function registerViews()
     {
-        $viewPath = resource_path('views/modules/core');
+        $viewPath = resource_path('views/modules/support');
 
         $sourcePath = __DIR__.'/../Resources/views';
 
@@ -69,8 +69,8 @@ class CoreServiceProvider extends ServiceProvider
         ],'views');
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/core';
-        }, \Config::get('view.paths')), [$sourcePath]), 'core');
+            return $path . '/modules/support';
+        }, \Config::get('view.paths')), [$sourcePath]), 'support');
     }
 
     /**
@@ -80,12 +80,12 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function registerTranslations()
     {
-        $langPath = resource_path('lang/modules/core');
+        $langPath = resource_path('lang/modules/support');
 
         if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, 'core');
+            $this->loadTranslationsFrom($langPath, 'support');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'core');
+            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'support');
         }
     }
 
