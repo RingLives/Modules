@@ -11,6 +11,6 @@
 |
 */
 
-Route::prefix('support')->group(function() {
-    Route::get('/', 'SupportController@index');
-});
+// Route::prefix('support')->group(function() {
+//     Route::get('/', 'SupportController@index');
+// });
