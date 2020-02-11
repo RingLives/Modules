@@ -1,0 +1,31 @@
+{
+    "name": "maxpro/role",
+    "authors": [
+        {
+            "name": "John Smith",
+            "email": "john@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Maxpro\\Role\\": ""
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "extra": {
+    	"laravel": {
+            "providers": [
+                "Maxpro\\Role\\Providers\\RoleServiceProvider",
+                "Maxpro\\Role\\Providers\\RouteServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
